@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LittleWhales.DB\LittleWhales.DB.csproj" />
+    <ProjectReference Include="..\LittleWhales.Domain\LittleWhales.Domain.csproj" />
+    <ProjectReference Include="..\LittleWhales.Infrastructure\LittleWhales.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

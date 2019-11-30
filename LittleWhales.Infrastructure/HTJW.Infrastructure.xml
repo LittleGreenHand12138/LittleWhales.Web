@@ -1,0 +1,1809 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LittleWhales.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="M:LittleWhales.Infrastructure.EnumUtil.GetDescription``2(System.Object,System.Boolean)">
+            <summary>
+            获取枚举值的描述
+            </summary>
+            <param name="value"></param>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Enums.DatabaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Enums.DatabaseType.SqlServer">
+            <summary>
+            SqlServer数据库
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Enums.DatabaseType.MySql">
+            <summary>
+            MySql数据库
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Enums.DatabaseType.Oracle">
+            <summary>
+            Oracle数据库
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Enums.DatabaseType.PostgreSql">
+            <summary>
+            PostgreSql数据库
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Enums.LoggerType">
+            <summary>
+            日志操作类型
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Enums.LoggerType.RDBMS">
+            <summary>
+            使用关系型数据库记录日志,例如SQlServer、MySQL、Oracle等
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Enums.LoggerType.ElasticSearch">
+            <summary>
+            使用ElasticSearch记录日志
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Enums.Right">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Enums.Status_Base.Enabling">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Enums.Status_Base.Disabling">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Extention">
+            <summary>
+            拓展类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToString(System.Byte[])">
+            <summary>
+            byte[]转string
+            注：默认使用UTF8编码
+            </summary>
+            <param name="bytes">byte[]数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToString(System.Byte[],System.Text.Encoding)">
+            <summary>
+            byte[]转string
+            </summary>
+            <param name="bytes">byte[]数组</param>
+            <param name="encoding">指定编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToBase64String(System.Byte[])">
+            <summary>
+            将byte[]转为Base64字符串
+            </summary>
+            <param name="bytes">字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToBinString(System.Byte)">
+            <summary>
+            转为二进制字符串
+            </summary>
+            <param name="aByte">字节</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToBinString(System.Byte[])">
+            <summary>
+            转为二进制字符串
+            注:一个字节转为8位二进制
+            </summary>
+            <param name="bytes">字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.To0XString(System.Byte[])">
+            <summary>
+            Byte数组转为对应的16进制字符串
+            </summary>
+            <param name="bytes">Byte数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.To0XString(System.Byte)">
+            <summary>
+            Byte数组转为对应的16进制字符串
+            </summary>
+            <param name="aByte">一个Byte</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToASCIIString(System.Byte[])">
+            <summary>
+            转为ASCII字符串（一个字节对应一个字符）
+            </summary>
+            <param name="bytes">字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToASCIIString(System.Byte)">
+            <summary>
+            转为ASCII字符串（一个字节对应一个字符）
+            </summary>
+            <param name="aByte">字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.GetXOR(System.Byte[])">
+            <summary>
+            获取异或值
+            注：每个字节异或
+            </summary>
+            <param name="bytes">字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToInt(System.Byte[])">
+            <summary>
+            将字节数组转为Int类型
+            </summary>
+            <param name="bytes">字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToObject(System.Byte[])">
+            <summary> 
+            将一个序列化后的byte[]数组还原
+            </summary>
+            <param name="bytes"></param>         
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToObject``1(System.Byte[])">
+            <summary>
+            将一个序列化后的byte[]数组还原
+            </summary>
+            <typeparam name="T">返回类型</typeparam>
+            <param name="bytes">字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.GetWeekOfYear(System.DateTime)">
+              <summary> 
+             获取某一日期是该年中的第几周
+              </summary> 
+              <param name="dateTime"> 日期 </param> 
+              <returns> 该日期在该年中的周数 </returns> 
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToJsTimestamp(System.DateTime)">
+            <summary>
+            获取Js格式的timestamp
+            </summary>
+            <param name="dateTime">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.JsGetTime(System.DateTime)">
+            <summary>
+            获取js中的getTime()
+            </summary>
+            <param name="dt">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.Default(System.DateTime)">
+            <summary>
+            返回默认时间1970-01-01
+            </summary>
+            <param name="dt">时间日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToCstTime(System.DateTime)">
+            <summary>
+            转为标准时间（北京时间，解决Linux时区问题）
+            </summary>
+            <param name="dt">当前时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.AddProperty(System.Dynamic.ExpandoObject,System.String,System.Object)">
+            <summary>
+            添加属性
+            </summary>
+            <param name="expandoObj">动态对象</param>
+            <param name="propertyName">属性名</param>
+            <param name="value">属性值</param>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.SetProperty(System.Dynamic.ExpandoObject,System.String,System.Object)">
+            <summary>
+            设置属性
+            </summary>
+            <param name="expandoObj">动态对象</param>
+            <param name="propertyName">属性名</param>
+            <param name="value">属性值</param>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.GetProperty(System.Dynamic.ExpandoObject,System.String)">
+            <summary>
+            获取属性
+            </summary>
+            <param name="expandoObj">动态对象</param>
+            <param name="propertyName">属性名</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.GetProperties(System.Dynamic.ExpandoObject)">
+            <summary>
+            获取所有属性
+            </summary>
+            <param name="expandoObj">动态对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.RemoveProperty(System.Dynamic.ExpandoObject,System.String)">
+            <summary>
+            删除属性
+            </summary>
+            <param name="expandoObj">动态对象</param>
+            <param name="propertyName">属性名</param>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToDataTable(System.Collections.Generic.IEnumerable{System.Dynamic.ExpandoObject})">
+            <summary>
+            将动态属性对象ExpandoObject列表转为DataTable
+            </summary>
+            <param name="dataList">数据源</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            组合继承属性选择表达式树,无拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``3(System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})">
+            <summary>
+            组合继承属性选择表达式树,1个拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="T1">拓展类型1</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``4(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3}})">
+            <summary>
+            组合继承属性选择表达式树,2个拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="T1">拓展类型1</typeparam>
+            <typeparam name="T2">拓展类型2</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``5(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4}})">
+            <summary>
+            组合继承属性选择表达式树,3个拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="T1">拓展类型1</typeparam>
+            <typeparam name="T2">拓展类型2</typeparam>
+            <typeparam name="T3">拓展类型3</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``6(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5}})">
+            <summary>
+            组合继承属性选择表达式树,4个拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="T1">拓展类型1</typeparam>
+            <typeparam name="T2">拓展类型2</typeparam>
+            <typeparam name="T3">拓展类型3</typeparam>
+            <typeparam name="T4">拓展类型4</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``7(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6}})">
+            <summary>
+            组合继承属性选择表达式树,5个拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="T1">拓展类型1</typeparam>
+            <typeparam name="T2">拓展类型2</typeparam>
+            <typeparam name="T3">拓展类型3</typeparam>
+            <typeparam name="T4">拓展类型4</typeparam>
+            <typeparam name="T5">拓展类型5</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``8(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7}})">
+            <summary>
+            组合继承属性选择表达式树,6个拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="T1">拓展类型1</typeparam>
+            <typeparam name="T2">拓展类型2</typeparam>
+            <typeparam name="T3">拓展类型3</typeparam>
+            <typeparam name="T4">拓展类型4</typeparam>
+            <typeparam name="T5">拓展类型5</typeparam>
+            <typeparam name="T6">拓展类型6</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``9(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8}})">
+            <summary>
+            组合继承属性选择表达式树,7个拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="T1">拓展类型1</typeparam>
+            <typeparam name="T2">拓展类型2</typeparam>
+            <typeparam name="T3">拓展类型3</typeparam>
+            <typeparam name="T4">拓展类型4</typeparam>
+            <typeparam name="T5">拓展类型5</typeparam>
+            <typeparam name="T6">拓展类型6</typeparam>
+            <typeparam name="T7">拓展类型7</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``10(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9}})">
+            <summary>
+            组合继承属性选择表达式树,8个拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="T1">拓展类型1</typeparam>
+            <typeparam name="T2">拓展类型2</typeparam>
+            <typeparam name="T3">拓展类型3</typeparam>
+            <typeparam name="T4">拓展类型4</typeparam>
+            <typeparam name="T5">拓展类型5</typeparam>
+            <typeparam name="T6">拓展类型6</typeparam>
+            <typeparam name="T7">拓展类型7</typeparam>
+            <typeparam name="T8">拓展类型8</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.BuildExtendSelectExpre``11(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10}})">
+            <summary>
+            组合继承属性选择表达式树,9个拓展参数
+            TResult将继承TBase的所有属性
+            </summary>
+            <typeparam name="TBase">原数据类型</typeparam>
+            <typeparam name="T1">拓展类型1</typeparam>
+            <typeparam name="T2">拓展类型2</typeparam>
+            <typeparam name="T3">拓展类型3</typeparam>
+            <typeparam name="T4">拓展类型4</typeparam>
+            <typeparam name="T5">拓展类型5</typeparam>
+            <typeparam name="T6">拓展类型6</typeparam>
+            <typeparam name="T7">拓展类型7</typeparam>
+            <typeparam name="T8">拓展类型8</typeparam>
+            <typeparam name="T9">拓展类型9</typeparam>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="expression">拓展表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            连接表达式与运算
+            </summary>
+            <typeparam name="T">参数</typeparam>
+            <param name="one">原表达式</param>
+            <param name="another">新的表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            连接表达式或运算
+            </summary>
+            <typeparam name="T">参数</typeparam>
+            <param name="one">原表达式</param>
+            <param name="another">新表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToSequentialGuid(System.Guid)">
+            <summary>
+            转为有序的GUID
+            注：长度为50字符
+            </summary>
+            <param name="guid">新的GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.Copy``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+            <summary>
+            复制序列中的数据
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="iEnumberable">原数据</param>
+            <param name="startIndex">原数据开始复制的起始位置</param>
+            <param name="length">需要复制的数据长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            给IEnumerable拓展ForEach方法
+            </summary>
+            <typeparam name="T">模型类</typeparam>
+            <param name="iEnumberable">数据源</param>
+            <param name="func">方法</param>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            给IEnumerable拓展ForEach方法
+            </summary>
+            <typeparam name="T">模型类</typeparam>
+            <param name="iEnumberable">数据源</param>
+            <param name="func">方法</param>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.CastToList``1(System.Collections.IEnumerable)">
+            <summary>
+            IEnumerable转换为List'T'
+            </summary>
+            <typeparam name="T">参数</typeparam>
+            <param name="source">数据源</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToDataTable``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            将IEnumerable'T'转为对应的DataTable
+            </summary>
+            <typeparam name="T">数据模型</typeparam>
+            <param name="iEnumberable">数据源</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToAscllStr(System.Int32)">
+            <summary>
+            int转Ascll字符
+            </summary>
+            <param name="ascllCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToDateTime_From_JsGetTime(System.Int64)">
+            <summary>
+            jsGetTime转为DateTime
+            </summary>
+            <param name="jsGetTime">js中Date.getTime()</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.#cctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToBytes(System.Object)">
+            <summary>
+            将一个object对象序列化，返回一个byte[]         
+            </summary> 
+            <param name="obj">能序列化的对象</param>
+            <returns></returns> 
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.IsNullOrEmpty(System.Object)">
+            <summary>
+            判断是否为Null或者空
+            </summary>
+            <param name="obj">对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToJson(System.Object,System.Boolean)">
+            <summary>
+            将对象序列化成Json字符串
+            </summary>
+            <param name="obj">需要序列化的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToValidDbValue(System.String)">
+            <summary>
+            处理SQL中关键符号
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.EntityToJson(System.Object)">
+            <summary>
+            实体类转json数据，速度快
+            </summary>
+            <param name="t">实体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.DeepClone``1(``0)">
+            <summary>
+            深复制
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="obj">对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToXmlStr``1(``0)">
+            <summary>
+            将对象序列化为XML字符串
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="obj">对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToXmlStr``1(``0,System.String)">
+            <summary>
+            将对象序列化为XML字符串
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="obj">对象</param>
+            <param name="rootNodeName">根节点名(建议设为xml)</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.GetPropertyValue(System.Object,System.String)">
+            <summary>
+            获取某属性值
+            </summary>
+            <param name="obj">对象</param>
+            <param name="propertyName">属性名</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.SetPropertyValue(System.Object,System.String,System.Object)">
+            <summary>
+            获取某属性值
+            </summary>
+            <param name="obj">对象</param>
+            <param name="propertyName">属性名</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ReadToBytes(System.IO.Stream)">
+            <summary>
+            将流Stream转为byte数组
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ReadToString(System.IO.Stream)">
+            <summary>
+            将流读为字符串
+            注：使用默认编码
+            </summary>
+            <param name="stream">流</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ReadToString(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            将流读为字符串
+            注：使用指定编码
+            </summary>
+            <param name="stream">流</param>
+            <param name="encoding">指定编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToBytes_FromBase64Str(System.String)">
+            <summary>
+            转为字节数组
+            </summary>
+            <param name="base64Str">base64字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToMD5String(System.String)">
+            <summary>
+            转换为MD5加密后的字符串（默认加密为32位）
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.Base64Encode(System.String)">
+            <summary>
+            Base64加密
+            注:默认采用UTF8编码
+            </summary>
+            <param name="source">待加密的明文</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.Base64Encode(System.String,System.Text.Encoding)">
+            <summary>
+            Base64加密
+            </summary>
+            <param name="source">待加密的明文</param>
+            <param name="encoding">加密采用的编码方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.Base64Decode(System.String)">
+            <summary>
+            Base64解密
+            注:默认使用UTF8编码
+            </summary>
+            <param name="result">待解密的密文</param>
+            <returns>解密后的字符串</returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.Base64Decode(System.String,System.Text.Encoding)">
+            <summary>
+            Base64解密
+            </summary>
+            <param name="result">待解密的密文</param>
+            <param name="encoding">解密采用的编码方式，注意和加密时采用的方式一致</param>
+            <returns>解密后的字符串</returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToSHA1Bytes(System.String)">
+            <summary>
+            计算SHA1摘要
+            注：默认使用UTF8编码
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToSHA1Bytes(System.String,System.Text.Encoding)">
+            <summary>
+            计算SHA1摘要
+            </summary>
+            <param name="str">字符串</param>
+            <param name="encoding">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToSHA1String(System.String)">
+            <summary>
+            转为SHA1哈希加密字符串
+            注：默认使用UTF8编码
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToSHA1String(System.String,System.Text.Encoding)">
+            <summary>
+            转为SHA1哈希
+            </summary>
+            <param name="str">字符串</param>
+            <param name="encoding">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToInt(System.String)">
+            <summary>
+            string转int
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToInt_FromBinString(System.String)">
+            <summary>
+            二进制字符串转为Int
+            </summary>
+            <param name="str">二进制字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToFieldAsName(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            返回字段别名
+            </summary>
+            <param name="input"></param>
+            <param name="fieldAsNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToInt0X(System.String)">
+            <summary>
+            将16进制字符串转为Int
+            </summary>
+            <param name="str">数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToDouble(System.String)">
+            <summary>
+            转换为double
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToBytes(System.String)">
+            <summary>
+            string转byte[]
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToBytes(System.String,System.Text.Encoding)">
+            <summary>
+            string转byte[]
+            </summary>
+            <param name="str">字符串</param>
+            <param name="theEncoding">需要的编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.To0XBytes(System.String)">
+            <summary>
+            将16进制字符串转为Byte数组
+            </summary>
+            <param name="str">16进制字符串(2个16进制字符表示一个Byte)</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToASCIIBytes(System.String)">
+            <summary>
+            将ASCII码形式的字符串转为对应字节数组
+            注：一个字节一个ASCII码字符
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToDateTime(System.String)">
+            <summary>
+            转换为日期格式
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToObject``1(System.String)">
+            <summary>
+            将Json字符串反序列化为对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="jsonStr">Json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.RemoveAt(System.String)">
+            <summary>
+            删除Json字符串中键中的@符号
+            </summary>
+            <param name="jsonStr">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToObject(System.String,System.Type)">
+            <summary>
+            将Json字符串反序列化为对象
+            </summary>
+            <param name="jsonStr">json字符串</param>
+            <param name="type">对象类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.XmlStrToObject``1(System.String)">
+            <summary>
+            将XML字符串反序列化为对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="xmlStr">XML字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.XmlStrToJObject(System.String)">
+            <summary>
+            将XML字符串反序列化为对象
+            </summary>
+            <param name="xmlStr">XML字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToList``1(System.String)">
+            <summary>
+            将Json字符串转为List'T'
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="jsonStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToDataTable(System.String)">
+            <summary>
+            将Json字符串转为DataTable
+            </summary>
+            <param name="jsonStr">Json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToJObject(System.String)">
+            <summary>
+            将Json字符串转为JObject
+            </summary>
+            <param name="jsonStr">Json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToJArray(System.String)">
+            <summary>
+            将Json字符串转为JArray
+            </summary>
+            <param name="jsonStr">Json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToEntity``1(System.String)">
+            <summary>
+            json数据转实体类,仅仅应用于单个实体类，速度非常快
+            </summary>
+            <typeparam name="T">泛型参数</typeparam>
+            <param name="json">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.JsonToObject``1(System.String)">
+            <summary>
+            解析JSON字符串生成对象实体
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="json">json字符串</param>
+            <returns>对象实体</returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.DeserializeJsonToList``1(System.String)">
+            <summary>
+            解析JSON数组生成对象实体集合
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="json">json数组字符串(eg.[{"ID":"112","Name":"石子儿"}])</param>
+            <returns>对象实体集合</returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToFirstUpperStr(System.String)">
+            <summary>
+            转为首字母大写
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToFirstLowerStr(System.String)">
+            <summary>
+            转为首字母小写
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToIPEndPoint(System.String)">
+            <summary>
+            转为网络终结点IPEndPoint
+            </summary>=
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Extention.ToEnum``1(System.String)">
+            <summary>
+            将枚举类型的文本转为枚举类型
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="enumText">枚举文本</param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.ParameterReplacer">
+            <summary>
+            继承ExpressionVisitor类，实现参数替换统一
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.ParameterReplacer.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            覆盖父方法，返回新的参数
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.GlobalSwitch">
+            <summary>
+            全局控制
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.GlobalSwitch.ProjectName">
+            <summary>
+            项目名
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.GlobalSwitch.WebRootUrl">
+            <summary>
+            网站根地址
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.GlobalSwitch.WebRootPath">
+            <summary>
+            网站文件根路径
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.GlobalSwitch.DatabaseType">
+            <summary>
+            默认数据库类型
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.GlobalSwitch.DefaultDbConName">
+            <summary>
+            默认数据库连接名
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.GlobalSwitch.CacheType">
+            <summary>
+            默认缓存
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.GlobalSwitch.RedisConfig">
+            <summary>
+            Redis配置字符串
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.GlobalSwitch.LoggerType">
+            <summary>
+            日志记录方式
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.GlobalSwitch.ElasticSearchNodes">
+            <summary>
+            ElasticSearch服务器配置
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.CacheType">
+            <summary>
+            默认缓存类型
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.CacheType.SystemCache">
+            <summary>
+            系统缓存
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.CacheType.RedisCache">
+            <summary>
+            Redis缓存
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Interfaces.ICreate.CreaterId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Interfaces.ICreate.CreaterTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Interfaces.IDelete.IsDelete">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Interfaces.IModify.ModifyId">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Interfaces.IModify.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Interfaces.ITableKey.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.LeftStyle.ISingletonDependency">
+            <summary>
+            每次注入都是一个对象
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.LeftStyle.ITransientDependency">
+            <summary>
+            每次注入都是一个新对象
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Map.GaodeHelper">
+            <summary>
+            高德地图调用帮助类
+            更多详情请参考 高德api
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Map.GaodeHelper.GetGeocode(System.String,System.String)">
+            <summary>
+            获取经纬度
+            </summary>
+            <param name="address"></param>
+            <param name="city"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Map.GaodeHelper.GetDistance(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取城市之间的距离
+            </summary>
+            <param name="begin"></param>
+            <param name="beginCity"></param>
+            <param name="end"></param>
+            <param name="endCity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Map.GaodeHelper.WebClientDownloadInfoToString(System.String)">
+            <summary>
+            模拟请求
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Map.GaodeHelper.GetLatitudeAndLongitude(System.String)">
+            <summary>
+            解析返回的经纬度信息
+            </summary>
+            <param name="GeocodeJsonFormat"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Models.AjaxResult">
+            <summary>
+            Ajax请求结果
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.AjaxResult.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.AjaxResult.ErrorCode">
+            <summary>
+            错误代码：
+            1：未登录
+            其它待定义
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.AjaxResult.msg">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.AjaxResult.Data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.BaseModel.CreaterId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.BaseModel.CreaterTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.BaseModel.IsDelete">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Models.MessageModel`1">
+            <summary>
+            通用返回信息类
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.MessageModel`1.success">
+            <summary>
+            操作是否成功
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.MessageModel`1.msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.MessageModel`1.response">
+            <summary>
+            返回数据集合
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Models.MessageModel`1.ErrorCode">
+            <summary>
+            错误代码：
+            1：未登录
+            其它待定义
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.RandomUtil.GenerateRandomNumber(System.Int32,System.Int32)">
+            <summary>
+            生成随机码 
+            </summary>
+            <param name="Length">长度</param>
+            <param name="category">1 数字加字母 2 仅数字 3 仅字母</param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Redis.CacheHelper">
+            <summary>
+            缓存帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.CacheHelper.#cctor">
+            <summary>
+            静态构造函数，初始化缓存类型
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Redis.CacheHelper.Cache">
+            <summary>
+            默认缓存
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Redis.CacheHelper.SystemCache">
+            <summary>
+            系统缓存
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Infrastructure.Redis.CacheHelper.RedisCache">
+            <summary>
+            Redis缓存
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Redis.ICacheService">
+            <summary>
+            缓存操作接口类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.ICacheService.SetCache(System.String,System.Object)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key">主键</param>
+            <param name="value">值</param>
+            <typeparam name="T">数据类型</typeparam>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.ICacheService.SetCache(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            设置缓存
+            注：默认过期类型为绝对过期
+            </summary>
+            <param name="key">主键</param>
+            <param name="value">值</param>
+            <param name="timeout">过期时间间隔</param>
+            <typeparam name="T">数据类型</typeparam>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.ICacheService.SetCache(System.String,System.Object,System.TimeSpan,LittleWhales.Infrastructure.Redis.ExpireType)">
+            <summary>
+            设置缓存
+            注：默认过期类型为绝对过期
+            </summary>
+            <param name="key">主键</param>
+            <param name="value">值</param>
+            <param name="timeout">过期时间间隔</param>
+            <param name="expireType">过期类型</param>
+            <typeparam name="T">数据类型</typeparam>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.ICacheService.SetKeyExpire(System.String,System.TimeSpan)">
+            <summary>
+            设置键失效时间
+            </summary>
+            <param name="key">键值</param>
+            <param name="expire">从现在起时间间隔</param>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.ICacheService.GetCache(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key">主键</param>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.ICacheService.GetCache``1(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key">主键</param>
+            <typeparam name="T">数据类型</typeparam>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.ICacheService.ContainsKey(System.String)">
+            <summary>
+            是否存在键值
+            </summary>
+            <param name="key">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.ICacheService.RemoveCache(System.String)">
+            <summary>
+            清除缓存
+            </summary>
+            <param name="key">主键</param>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Redis.ValueInfoEntry">
+            <summary>
+            值信息
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Redis.ExpireType">
+            <summary>
+            过期类型
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Redis.ExpireType.Absolute">
+            <summary>
+            绝对过期
+            注：即自创建一段时间后就过期
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Infrastructure.Redis.ExpireType.Relative">
+            <summary>
+            相对过期
+            注：即该键未被访问后一段时间后过期，若此键一直被访问则过期时间自动延长
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Redis.RedisCacheService">
+            <summary>
+            Redis缓存
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Infrastructure.Redis.RedisCacheService.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Infrastructure.Redis.SystemCache">
+            <summary>
+            系统缓存帮助类
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.EnumExtension">
+            <summary>
+            枚举扩展类
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.AsposeOfficeHelper">
+            <summary>
+            使用Aspose组件的Office文件操作帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.AsposeOfficeHelper.DataTableToExcelBytes(System.Data.DataTable)">
+            <summary>
+            将DataTable输出为字节数组
+            </summary>
+            <param name="dt">表格数据</param>
+            <returns>Byte数组</returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.AsposeOfficeHelper.ReadExcel(System.String)">
+            <summary>
+            从excel文件导入数据
+            注：默认将第一行当作标题行，即不当作数据
+            </summary>
+            <param name="fileNmae">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.AsposeOfficeHelper.ReadExcel(System.String,System.Boolean)">
+            <summary>
+            从excel文件导入数据
+            </summary>
+            <param name="fileNmae">文件名</param>
+            <param name="exportColumnName">是否将第一行当作标题行</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.AsposeOfficeHelper.ReadExcel(System.Byte[])">
+            <summary>
+            从excel文件字节源导入
+            注：默认将第一行当作标题行，即不当作数据
+            </summary>
+            <param name="fileBytes">文件字节源</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.AsposeOfficeHelper.ReadExcel(System.Byte[],System.Boolean)">
+            <summary>
+            从excel文件字节源导入
+            </summary>
+            <param name="fileBytes">文件字节源</param>
+            <param name="exportColumnName">是否将第一行当作标题行</param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.BaiduApiHelper">
+            <summary>
+            百度接口签名帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.BaiduApiHelper.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="accessKeyId">百度AccessKeyId(AK)</param>
+            <param name="secretAccessKey">百度SecretAccessKey(SK)</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.BaiduApiHelper.RequestData(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            发送POST请求
+            </summary>
+            <param name="method">请求方法，需要大写，列如(POST)</param>
+            <param name="host">主机地址列如(http://sms.bj.baidubce.com)</param>
+            <param name="url">接口地址列如(/bce/v2/message)</param>
+            <param name="paramters">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.BaiduApiHelper.SendMsg(System.String,System.String)">
+            <summary>
+            发送短信
+            </summary>
+            <param name="phoneNum">手机号码</param>
+            <param name="code">验证码</param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.DelegateHelper">
+            <summary>
+            委托帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.DelegateHelper.RunAsync(System.Action,System.Action)">
+            <summary>
+            异步执行方法
+            </summary>
+            <param name="firstFunc">首先执行的方法</param>
+            <param name="next">接下来执行的方法</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.DelegateHelper.RunAsync(System.Func{System.Object},System.Action{System.Object})">
+            <summary>
+            异步执行方法
+            </summary>
+            <param name="firstFunc">首先执行的方法</param>
+            <param name="next">接下来执行的方法</param>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.EmitHelper">
+            <summary>
+            Emit反射帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.EmitHelper.CreateBuilder(System.Type)">
+            <summary>
+            创建对象建造者
+            </summary>
+            <param name="type">对象类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.ExcelUtil.ReadExcelToDataTable(System.String,System.String,System.Boolean)">
+            <summary>
+            将excel文件内容读取到DataTable数据表中
+            </summary>
+            <param name="fileName">文件完整路径名</param>
+            <param name="sheetName">指定读取excel工作薄sheet的名称</param>
+            <param name="isFirstRowColumn">第一行是否是DataTable的列名：true=是，false=否</param>
+            <returns>DataTable数据表</returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.ExcelUtil.ReadStreamToDataTable(System.IO.Stream,System.String,System.Boolean)">
+            <summary>
+            将文件流读取到DataTable数据表中
+            </summary>
+            <param name="fileStream">文件流</param>
+            <param name="sheetName">指定读取excel工作薄sheet的名称</param>
+            <param name="isFirstRowColumn">第一行是否是DataTable的列名：true=是，false=否</param>
+            <returns>DataTable数据表</returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.ExcelUtil.CreateVehicleExcel(System.String[],System.String[],System.String[],System.String[],System.String[],System.String)">
+            <summary>
+            生成车辆导入模板
+            </summary>
+            <param name="brand"></param>
+            <param name="strain"></param>
+            <param name="VehicleUse"></param>
+            <param name="Path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.ExcelUtil.CreateDriverExcel(System.String[],System.String)">
+            <summary>
+            生成司机导入模板
+            </summary>
+            <param name="driversLicenseCategor"></param>
+            <param name="Path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.ExceptionHelper">
+            <summary>
+            异常处理帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.ExceptionHelper.GetExceptionAddr(System.Exception)">
+            <summary>
+            获取异常位置
+            </summary>
+            <param name="e">异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.ExceptionHelper.GetExceptionAllMsg(System.Exception,System.Int32)">
+            <summary>
+            获取异常消息
+            </summary>
+            <param name="ex">捕捉的异常</param>
+            <param name="level">内部异常层级</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.ExceptionHelper.GetExceptionAllMsg(System.Exception)">
+            <summary>
+            获取异常消息
+            </summary>
+            <param name="ex">捕捉的异常</param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.FileHelper">
+            <summary>
+            文件操作帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.Exists(System.String)">
+            <summary>
+            判断文件是否存在
+            </summary>
+            <param name="path">文件目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.GetCurrentDir">
+            <summary>
+            获取当前程序根目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.WriteTxt(System.String,System.String)">
+            <summary>
+            输出字符串到文件
+            注：使用系统默认编码;若文件不存在则创建新的,若存在则覆盖
+            </summary>
+            <param name="content">内容</param>
+            <param name="path">文件路径</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.WriteTxt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            输出字符串到文件
+            注：使用自定义编码;若文件不存在则创建新的,若存在则覆盖
+            </summary>
+            <param name="content">内容</param>
+            <param name="path">文件路径</param>
+            <param name="encoding">编码</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.WriteTxt(System.String,System.String,System.IO.FileMode)">
+            <summary>
+            输出字符串到文件
+            注：使用自定义模式,使用默认编码
+            </summary>
+            <param name="content">内容</param>
+            <param name="path">文件路径</param>
+            <param name="fileModel">输出方法</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.WriteTxt(System.String,System.String,System.Text.Encoding,System.IO.FileMode)">
+            <summary>
+            输出字符串到文件
+            注：使用自定义编码以及写入模式
+            </summary>
+            <param name="content">内容</param>
+            <param name="path">文件路径</param>
+            <param name="encoding">字符编码</param>
+            <param name="fileModel">写入模式</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.WriteTxt(System.String,System.String,System.Text.Encoding,System.Nullable{System.IO.FileMode})">
+            <summary>
+            输出字符串到文件
+            注：使用自定义编码以及写入模式
+            </summary>
+            <param name="content">内容</param>
+            <param name="path">文件路径</param>
+            <param name="encoding">字符编码</param>
+            <param name="fileModel">写入模式</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.CheckDirectory(System.String)">
+            <summary>
+            检验目录，若目录已存在则不变
+            </summary>
+            <param name="path">目录位置</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.WriteLog(System.String,System.String)">
+            <summary>
+            输出日志到指定文件
+            </summary>
+            <param name="msg">日志消息</param>
+            <param name="path">日志文件位置（默认为D:\测试\a.log）</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.FileHelper.GetPathDirectory(System.String)">
+            <summary>
+            获取文件位置中的目录位置（不包括文件名）
+            </summary>
+            <param name="path">文件位置</param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.GuidHelper">
+            <summary>
+            GUID帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.GuidHelper.GenerateKey">
+            <summary>
+            生成主键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.HttpHelper">
+            <summary>
+            Http请求操作帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.HttpHelper.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.HttpHelper.GetData(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.String},System.Security.Cryptography.X509Certificates.X509Certificate)">
+            <summary>
+            发起GET请求
+            注：若使用证书,推荐使用X509Certificate2的pkcs12证书
+            </summary>
+            <param name="url">地址</param>
+            <param name="paramters">参数</param>
+            <param name="headers">请求头</param>
+            <param name="cerFile">证书</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.HttpHelper.PostData(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.String},LittleWhales.Extensions.Infrastructure.ContentType,System.Security.Cryptography.X509Certificates.X509Certificate)">
+            <summary>
+            发起POST请求
+            注：若使用证书,推荐使用X509Certificate2的pkcs12证书
+            </summary>
+            <param name="url">地址</param>
+            <param name="paramters">参数</param>
+            <param name="headers">请求头</param>
+            <param name="contentType">请求的ContentType</param>
+            <param name="cerFile">证书</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.HttpHelper.PostData(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Security.Cryptography.X509Certificates.X509Certificate)">
+            <summary>
+            发起POST请求
+            注：若使用证书,推荐使用X509Certificate2的pkcs12证书
+            </summary>
+            <param name="url">地址</param>
+            <param name="body">请求体</param>
+            <param name="contentType">请求的ContentType</param>
+            <param name="headers">请求头</param>
+            <param name="cerFile">证书</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.HttpHelper.RequestData(LittleWhales.Extensions.Infrastructure.HttpMethod,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.String},LittleWhales.Extensions.Infrastructure.ContentType,System.Security.Cryptography.X509Certificates.X509Certificate)">
+            <summary>
+            请求数据
+            注：若使用证书,推荐使用X509Certificate2的pkcs12证书
+            </summary>
+            <param name="method">请求方法</param>
+            <param name="url">URL地址</param>
+            <param name="paramters">参数</param>
+            <param name="headers">请求头信息</param>
+            <param name="contentType">请求数据类型</param>
+            <param name="cerFile">证书</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.HttpHelper.RequestData(System.String,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Security.Cryptography.X509Certificates.X509Certificate)">
+            <summary>
+            请求数据
+            注：若使用证书,推荐使用X509Certificate2的pkcs12证书
+            </summary>
+            <param name="method">请求方法</param>
+            <param name="url">请求地址</param>
+            <param name="body">请求的body内容</param>
+            <param name="contentType">请求数据类型</param>
+            <param name="headers">请求头</param>
+            <param name="cerFile">证书</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.HttpHelper.GetAllRequestParams(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取所有请求的参数（包括get参数和post参数）
+            </summary>
+            <param name="context">请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.HttpHelper.BuildGetFullUrl(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            构建完全Url
+            </summary>
+            <param name="url">Url</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.HttpHelper.GetHtml(System.String)">
+            <summary>
+            从URL获取html文档
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.HttpMethod">
+            <summary>
+            Http请求方法定义
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Extensions.Infrastructure.ContentType.Form">
+            <summary>
+            传统Form表单,即application/x-www-form-urlencoded
+            </summary>
+        </member>
+        <member name="F:LittleWhales.Extensions.Infrastructure.ContentType.Json">
+            <summary>
+            使用Json,即application/json
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.IocHelper">
+            <summary>
+            Ioc容器帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IocHelper.RegisterType``2">
+            <summary>
+            注册类型
+            </summary>
+            <typeparam name="TFrom">定义类型</typeparam>
+            <typeparam name="TTo">实现类型</typeparam>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IocHelper.RegisterType``2(System.String)">
+            <summary>
+            注册类型
+            </summary>
+            <param name="name">注册名</param>
+            <typeparam name="TFrom">定义类型</typeparam>
+            <typeparam name="TTo">实现类型</typeparam>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IocHelper.RegisterType(System.Type,System.Type,System.String)">
+            <summary>
+            注册类型
+            </summary>
+            <param name="typeFrom">定义类型</param>
+            <param name="typeTo">实现类型</param>
+            <param name="name">注册名</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IocHelper.Resolve``1">
+            <summary>
+            获取对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IocHelper.Resolve``1(System.Object[])">
+            <summary>
+            获取对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="paramters">构造参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IocHelper.Resolve``1(System.String)">
+            <summary>
+            获取对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="name">注册名</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IocHelper.Resolve``1(System.String,System.Object[])">
+            <summary>
+            获取对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="name">注册名</param>
+            <param name="paramters">构造参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IocHelper.Resolve(System.Type,System.String,System.Object[])">
+            <summary>
+            获取对象
+            </summary>
+            <param name="typeFrom">对象类型</param>
+            <param name="name">注册名</param>
+            <param name="paramters">构造参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.IpHelper">
+            <summary>
+            Ip地址帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IpHelper.GetLocalIp">
+            <summary>
+            获取本地IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IpHelper.GetFirstAvailablePort">
+            <summary>
+            获取第一个可用的端口号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IpHelper.PortIsAvailable(System.Int32)">
+            <summary>
+            检查指定端口是否已用
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.IpHelper.PortIsUsed">
+            <summary>
+            获取操作系统已用的端口号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.LinqHelper">
+            <summary>
+            Linq操作帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.LinqHelper.True``1">
+            <summary>
+            创建初始条件为True的表达式
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.LinqHelper.False``1">
+            <summary>
+            创建初始条件为False的表达式
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.LogHelper">
+            <summary>
+            日志帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.LogHelper.WriteLog_LocalTxt(System.String)">
+            <summary>
+            写入日志到本地TXT文件
+            注：日志文件名为"A_log.txt",目录为根目录
+            </summary>
+            <param name="log">日志内容</param>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.LoopHelper">
+            <summary>
+            循环帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.LoopHelper.Loop(System.Int32,System.Action)">
+            <summary>
+            循环指定次数
+            </summary>
+            <param name="count">循环次数</param>
+            <param name="method">执行的方法</param>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.LoopHelper.Loop(System.Int32,System.Action{System.Int32})">
+            <summary>
+            循环指定次数
+            </summary>
+            <param name="count">循环次数</param>
+            <param name="method">执行的方法</param>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.RandomHelper">
+            <summary>
+            Random随机数帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.RandomHelper.Next(System.Int32,System.Int32)">
+            <summary>
+            下一个随机数
+            </summary>
+            <param name="minValue">最小值</param>
+            <param name="maxValue">最大值</param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.RandomHelper.Next``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            下一个随机值
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+            <param name="source">值的集合</param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.TypeBuilderHelper">
+            <summary>
+            运行时创建类型
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.TypeBuilderHelper.BuildType(System.String,System.String,System.Collections.Generic.List{LittleWhales.Extensions.Infrastructure.PropertyConfig})">
+            <summary>
+            创建类型
+            </summary>
+            <param name="typeFullName">类型完全名,包括命名空间</param>
+            <param name="assemblyName">类型程序集名</param>
+            <param name="properties">类型属性配置</param>
+            <returns></returns>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.PropertyConfig">
+            <summary>
+            类型属性配置
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Extensions.Infrastructure.PropertyConfig.PropertyName">
+            <summary>
+            属性名
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Extensions.Infrastructure.PropertyConfig.PropertyType">
+            <summary>
+            属性类型
+            </summary>
+        </member>
+        <member name="P:LittleWhales.Extensions.Infrastructure.PropertyConfig.CustomAttributes">
+            <summary>
+            属性包含的自定义特性
+            </summary>
+        </member>
+        <member name="T:LittleWhales.Extensions.Infrastructure.XmlHelper">
+            <summary>
+            XML文档操作帮助类
+            </summary>
+        </member>
+        <member name="M:LittleWhales.Extensions.Infrastructure.XmlHelper.Serialize(System.Object)">
+            <summary>
+            序列化为XML字符串
+            </summary>
+            <param name="obj">对象</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
